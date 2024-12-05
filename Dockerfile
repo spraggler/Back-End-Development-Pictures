@@ -11,10 +11,11 @@ RUN pip3 install --upgrade pip==21.3.1
 
 RUN pip3 install -r requirements.txt
 
-USER 1001
+# USER 1001
 
 COPY . /opt/app-root/src
 ENV FLASK_APP=app
+ENV FLASK_ENV=development
 ENV PORT 3000
 
 EXPOSE 3000
